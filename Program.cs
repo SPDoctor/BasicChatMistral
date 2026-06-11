@@ -1,7 +1,7 @@
 ﻿using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
-using Plugins;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Plugins;
 
 var builder = Kernel.CreateBuilder();
 
@@ -15,9 +15,8 @@ builder.Services.AddOpenAIChatCompletion(
     apiKey: apiKey);
 
 builder.Plugins.AddFromType<TimePlugin>();
+builder.Plugins.AddFromType<LightPlugin>();
 var kernel = builder.Build();
-
-var chat = kernel.GetRequiredService<IChatCompletionService>();
 
 // Create chat history
 var history = new ChatHistory();

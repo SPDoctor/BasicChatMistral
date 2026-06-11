@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="com.plenom.BusylightSDK" Version="4.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.77.0" />
     <PackageReference Include="Microsoft.SemanticKernel.Connectors.AzureAIInference" Version="1.77.0-beta" />
